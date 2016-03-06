@@ -1,30 +1,34 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title> Tugce cimen</title>
-        <style type="text/css">
-            html, body {height: 100%; width: 100%; margin: 0}
-            table {height:100%; width:100%;}
-            tr {width: 100%; min-height: 33%}
-            td {text-align: center; font-size: 35 px;}
-        </style> 
-       <meta charset="UTF-8"/>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <table>
-            <tbody>
-                <tr>
-                <td>t</td>
-                <td>g</td>
-                <td>c</td></tr>
-            <tr><td>c</td>
-                <td>m</td>
-                <td>n</td></tr>
-            <tr><td>1</td>
-                <td>2</td>
-                <td>3</td></tr>
-            </tbody>
-          </table>
-    </body>
+        <style>body{background-color:teal;}</style>
+    <title> Registiration Form </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1> <fieldset> <legend>
+    <font color="darkturquoise" face="Brittanic Bold" size="6"/>Register On</legend>  </fieldset>  
+ </h1>
+  
+    <form action="action_page.php">     
+        <h1> <font color="gold" face="Comic Sans MS" size="5"/> Name :<input type="text"  name="name"/>  </h1> 
+        
+        <h1> <font color="lime" face="Comic Sans MS"size="5"/> Surname: <input type="text" name="surname" /> </h1>  
+        <h1> <font color="brown" face="Comic Sans MS"size="5"/>   ID Number:  <input type="text" name="id number" />  </h1>
+
+
+   
+     <h1> <font color="purple" face="Comic Sans MS"size="5"/>Select a hobby: </h1> 
+    
+     <input type="radio" name="gender" value="taekwondo" /> Taekwondo <br>
+  <input type="radio" name="gender" value="sing a song"/> Sing a Song<br>
+  <input type="radio" name="gender" value="read a book"/> Read a Book<br>
+  <input type="radio" name="gender" value="draw a picture"/> Draw a Picture<br>
+  <input type="radio" name="gender" value="learn a language"/> Learn a language <br>
+  <input type="radio" name="gender" value="other"/> Other <br>
+  <br><input type="submit" value="Submit">  
+    </form>
+</body>
+</html>
+
 </html>
