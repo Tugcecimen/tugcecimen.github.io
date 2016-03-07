@@ -1,34 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <style>body{background-color:teal;}</style>
-    <title> Registiration Form </title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <h1> <fieldset> <legend>
-    <font color="darkturquoise" face="Brittanic Bold" size="6"/>Register On</legend>  </fieldset>  
- </h1>
-  
-    <form action="action_page.php">     
-        <h1> <font color="gold" face="Comic Sans MS" size="5"/> Name :<input type="text"  name="name"/>  </h1> 
-        
-        <h1> <font color="lime" face="Comic Sans MS"size="5"/> Surname: <input type="text" name="surname" /> </h1>  
-        <h1> <font color="brown" face="Comic Sans MS"size="5"/>   ID Number:  <input type="text" name="id number" />  </h1>
-
-
-   
-     <h1> <font color="purple" face="Comic Sans MS"size="5"/>Select a hobby: </h1> 
-    
-     <input type="radio" name="gender" value="taekwondo" /> Taekwondo <br>
-  <input type="radio" name="gender" value="sing a song"/> Sing a Song<br>
-  <input type="radio" name="gender" value="read a book"/> Read a Book<br>
-  <input type="radio" name="gender" value="draw a picture"/> Draw a Picture<br>
-  <input type="radio" name="gender" value="learn a language"/> Learn a language <br>
-  <input type="radio" name="gender" value="other"/> Other <br>
-  <br><input type="submit" value="Submit">  
-    </form>
-</body>
-</html>
-
+        <title> Dynamic Webpage </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <style>
+            #outer {
+            position:absolute ;
+            top:45%;
+            left:45%;
+            background-color:lightblue;
+            width: 6em;
+            height:4em ;
+            }
+            #inner {
+                top: 45%;
+                left: 45%;
+           clear:both;
+          vertical-align:middle;
+          text-align:center;
+          background-color:teal;
+          color:whitesmoke;
+          pointer:;
+            }
+            
+            
+            
+      </style>
+    </head>
+    <body>
+        <div id="outer">
+            <span id="inner">  <b>Hello</b> 
+            </span>
+        </div>
+            <div>
+            <script>
+                $ ("#inner") hover(function(){
+                    $(this) css("background-color","green");                     
+             }, 
+                     function() {
+                 $(this) css("background-color","lightblue");
+             }
+             );
+     $('#inner') click(
+             function(){
+                 window.location="http://www.hello.de";
+             }
+        );                
+        </script>
+            
+                  
+        </div>
+    </body>
 </html>
