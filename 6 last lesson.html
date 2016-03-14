@@ -2,6 +2,7 @@
 <html>
 
   <head>
+  <h1> My lesson work </h1>
     <script   src="https://code.jquery.com/jquery-2.2.1.js"   integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc="   crossorigin="anonymous"></script>
 
 
@@ -24,22 +25,49 @@
     </form>
     <div id="error">
     </div>
-
+  </div> 
     <script>
+        var in1 = parseInt ($('#input1').val());
+        var in2 = parseInt ($('#input2').val());
       function calculate(){
-        var input1 = $('#input1').val();
-        var input2 = $('#input2').val();
-        var num1 = parseInt(input1);
-        var num2 = parseInt(input2);
-        if(isNaN(num1) || isNaN(num2)){
-          $("<p style='color:red;'>not a number</p>").appendTo('#error');
-        }else{
-          var operator = $('#operator').val();
-          var res = eval(num1 + operator + num2);
-          $('#output').val(res);
-          console.log(eval(num1 + operator + num2));
+         if ( checkInput1(in1,in2){
+          var res = eval(in1 + $('#operator')val()+ in2 );
+          $('output')val(res);
+             
+         }
+              else {
+            $('#error').html("you made "+ i +" mistakes" );
+            i++;          
+        }     }
+        
+                function checkInput1(){
+            if (isNaN(in1)) || if (isNaN(in2)){ // || means OR; && means AND; means NOT;
+                 return false;
         }
-      }
+        return true;
+        }
+        
+        function checkInput2(){
+            if (isNaN(in1)) {
+                return false;
+            }
+            
+             if (isNaN(in2)){
+                 return false;
+        }
+        return true;
+    }  
+      function checkInput3(in1,in2){
+            if (isNaN(in1)) {
+                return false;
+            }
+            
+             if (isNaN(in2)){
+                 return false;
+        }
+        return true;
+         
+    
     </script>
   </body>
 </html>
