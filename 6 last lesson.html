@@ -1,0 +1,45 @@
+
+<html>
+
+  <head>
+    <script   src="https://code.jquery.com/jquery-2.2.1.js"   integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc="   crossorigin="anonymous"></script>
+
+
+  </head>
+
+  <body>
+
+    <form>
+      <input type="text" id="input1">
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="text" id="input2">
+      <input type="button" id="calc" value="calc" onclick="calculate();">
+      <input type="text" id="output" disabled>
+      <br>
+    </form>
+    <div id="error">
+    </div>
+
+    <script>
+      function calculate(){
+        var input1 = $('#input1').val();
+        var input2 = $('#input2').val();
+        var num1 = parseInt(input1);
+        var num2 = parseInt(input2);
+        if(isNaN(num1) || isNaN(num2)){
+          $("<p style='color:red;'>not a number</p>").appendTo('#error');
+        }else{
+          var operator = $('#operator').val();
+          var res = eval(num1 + operator + num2);
+          $('#output').val(res);
+          console.log(eval(num1 + operator + num2));
+        }
+      }
+    </script>
+  </body>
+</html>
