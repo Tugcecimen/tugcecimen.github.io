@@ -1,43 +1,50 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title> addition </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script>
-            /*
-             * 
-             */
-            function factorial(num) {
-                var res = 1; //the result we will return
-                for(var i=2; i<=num; i++) { //loop up to num
-                    res = res * i; //res *= i;
-                }
-                return res;
-            }
-            
-            // var res5 = factorial(5);
-            
-        </script>
-    </head>
-    <body>
-        <div>
-            <form onSubmit="return false"  oninput="out.value = parseInt (a.value ) + parseInt (b.value)">
-  <input name="a" type="number" step="any"> +
-  <input name="b" type="number" step="any"> =
-  <output name="out"></output>
- </form>
 
-            
-        </div>
-        <script>
-            function calculate() {
-                var innum = $('#num').val();
-                var res = factorial(innum);
-                $('#res').val(res);
-            }            
-        </script>
-    <h1> Lets we can do some addition process with fun math on html ! :) </h1>
-    </body>
+  <head>
+  <h1>homework 18.03</h1> 
+   <script 
+   src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>  
+<body>
+    <h1> My calculator </h1>
+    <div id="fields">
+            <form id="f1">
+      <input type="text" id="input1"/>
+      <select id="signs">
+        <option value="+">+</option>
+        <option value="-">*</option>
+        <option value="*">/</option>
+        <option value="/">+</option>
+      </select>
+      <input type="text" id="input2"/>
+      <input type="button" id="calc" value="calculate it" onclick="calculation();"/>
+      <input type="text" id="res"  placeholder="Result."disabled/>
+          </form>
+          </div>
+        <div id="error"></div>
+    
+<script> 
+   var errNum = 1;
+            function calculation() {
+                var input1 = parseInt($('#in1').val());
+                var input2 = parseInt($('#in2').val());
+                if (inputCheck(input1, input2)) {
+                    var result = eval(input1 + $("#symbols").val() + input2);
+                    $('#res').val(result);
+                } else {
+                    $('#error').html("You have made "+ errNum +" mistake(s).");
+                    errNum++;
+                    }
+            }
+            function inputCheck(input1, input2) {
+                if(!isNaN(input1) && !isNaN(input2)){
+                    return true;
+                } else{
+                    return false;
+                }
+            }
+</script>
+   </body>
 </html>
