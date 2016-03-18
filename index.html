@@ -31,7 +31,7 @@
                 var input1 = parseInt($('#in1').val());
                 var input2 = parseInt($('#in2').val());
                 if (inputCheck(input1, input2)) {
-                    var result = eval(input1 + $("#symbols").val() + input2);
+                    var result = eval(input1 + $("#signs").val() + input2);
                     $('#res').val(result);
                 } else {
                     $('#error').html("You have made "+ errNum +" mistake(s).");
