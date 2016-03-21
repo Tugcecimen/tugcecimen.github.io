@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>        
+
+        <title>Array Homework</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <div id = "avg">
+            
+        </div>
+        
+        <script>
+            
+            var members = {members:[
+                    {"name":"sevim", "height":155, "weight":70},
+                    {"name":"gülden","height":167, "weight":75},
+                    {"name":"kemal", "height":170, "weight":80}]};
+               var avgHeight = calcAvgHeight(members);
+               $('#avg').append("Average height of members: " + avgHeight + "<br>");
+               var avgWeight = calcAvgWeight(members);
+               $('#avg').append("Average weight of members: " + avgWeight + "<br>");
+         
+            function calcAvgHeight(obj){
+                var totalHeight = 0;
+                for(var i = 0; i < obj.members.length; i++){
+                    totalHeight += obj.members[i].height;
+                }
+                return totalHeight / obj.members.length;
+            }
+            
+            function calcAvgWeight(obj){
+                return 0;
+            }
+            
+        </script>
+        
+    </body>
+</html>
