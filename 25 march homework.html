@@ -37,10 +37,14 @@ and open the template in the editor.
                 return totalHeight / obj.members.length;
             }
             
-            function calcAvgWeight(obj){
-                return 0;
+           
+             var totalWeight = 0;
+                for(var i = 0; i < obj.members.length; i++){
+                    totalWeight += obj.members[i].weight;
+                }
+                return totalWeight / obj.members.length;
             }
-            
+        
         </script>
         
     </body>
