@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form>
+             <input type="text" id="input1">
+             <select id="operator">
+               <option value="+">+</option>
+               <option value="-">-</option>
+               <option value="*">*</option>
+               <option value="/">/</option>
+             </select>
+             <input type="text" id="input2">
+             <input type="button" id="calc" value="calc" onclick="calculate();">
+             <input type="text" id="output" disabled>
+             <br>
+           </form>
+           <div id="error">
+           </div>
+            
+            
+            
+        </div>
+        <script >
+            function calculate(){
+                var input = $('#input1').val();
+                var res = doCalc (input);
+                disp(res);
+                
+    }
+             function doCalc (input)
+             sleep(100);
+             return "done with calculation";
+             
+            }
+            function sleep(dur)  {
+                for(var i=0; i<1000*dur; i++) {
+                    var x= Math.aqrt(i);
+                    if(x%10==0)
+                        console.log(i+"->"+x);
+                }
+            }
+            function disp(show) {
+                $('#output').val(show);
+                
+            }
+        </script>
+    </body>
+</html>
