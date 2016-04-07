@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Tugce's dragging </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="toword.js"></script>
+        <style>
+            #tugce{list-style-type: none;
+               background-color: pink;
+               color: whitesmoke;}
+            #cimen{list-style-type:circle;
+                  background-color: pink;
+            }
+            li{background-color:yellowgreen;
+               color: brown;
+               width: 20%;
+               height: 20%;
+               margin: 4%;
+               }
+        </style>
+        <script type="text/javascript">
+            
+                    $().ready(
+                    function enumaratebabe(){
+                        for(var i=0; i<10; i++){
+                            var elemID = '#tugce';
+                             var id = 0;
+                    $(elemID).append("<li id='" + i + "'>" + i + "</li>");
+                    $('#' + i ).draggable();
+                }
+            });
+            
+                 
+            
+                    $().ready(
+                    function tugcebest(){
+                        for(var i=0; i<10; i++ ){
+                            var elemID2 = '#cimen';
+                            var id = 0;
+                            var words = toWords(i);
+                    $(elemID2).append("<li id='" + i + "'>" + words + "</li>");
+                    $('#' + i ).droppable();
+                    }
+            });
+                    $().ready(
+                    function tugcemore( event, ui ){
+                       var draggable = ui.draggable;
+                      
+            });
+            
+        </script>
+    </head>
+    <body>
+        "null" <br> "eins"<br>  "zwei"<br> "drei"<br>  "vier" <br> "fünf"<br>  "sechs"<br>  "sieben" <br> "acht" <br> "neun"
+          
+        <ul id="tugce">
+            
+        </ul>
+        <ul id="cimen">      
+        </ul>
+      
+        
+    </body>
+</html>
