@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>  
+        <title>TUGCE DRAG AND DROP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <style>
+            #texts{
+                position: absolute;
+                top: 10px;
+                left:10px;
+                width: 100px;
+                height: 200px;
+            }
+            #numbers{
+                position: absolute;
+                top: 200px;
+                left: 200px;
+                width: 100px;
+                width: 100px;
+                background-color: red;
+            }
+            ul
+            {
+                list-style-type: none;
+            }
+        </style>
+         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+
+        </script>
+    </head>
+    <body>
+        <ul id="texts">
+        </ul> 
+        <ul id="numbers">
+        </ul>
+       
+        <script type="text/javascript">
+            
+                    $("#arrow").draggable();
+                    $("target")draggable();
+                    var numText = ('null','eins','zwei',' eins','zwei','drei','vier','fünf','sechs','sieben','acht','neun','zehn')
+                        var ulNumt=$('numNumeric');
+                        for(var i=0; i<numText.length; i++){
+                            ulText.append('li id="t'+ (i+1)+ '">'+numText[i]+'/<li>');
+                            ulNum.append('li id="n'+ (i+1)+ '">'+(i+1)+'/<li>');
+                        }
+                            
+                  var hidden=0
+                        for(var i=0 ; i< numText.length; i++){
+                        $('#n' + i ).data("index",{index:i});
+                        $('#n' + i ).data("index",{index:i});
+                        $('#t' + i ).data("index",{index:i});
+                        $('#t' + i ).droppable({drop:function(event,ui){
+                            var ni=ui.draggable.attr("id");
+                            var ti=this.id;                           
+                            
+                            var niElem = $('#'+ni);
+                            var tiElem = $('#'+ti);
+                            if(ni.Elem.data("index").index===tiElem.data("index").index){
+                                // correct
+                                nİElem.draggable("disable");
+                                niElem.css("display","none");
+                                hidden++;
+                                if (hidden===numText.length){
+                                 //   alert("done");
+                                 $('ul').randomize();
+                                 for (var j= 
+                                }
+                            }    else {
+                                
+                        //wrong
+                       var left=Math.floor((Math.random()*(dimx-20))+10);
+                       var top=Math.floor((Math.random()*(dimx-20))+10);
+                       niElem.css("left",left+"px");
+                        niElem.css("top",top+"px");
+                    }
+                    }});
+                        }
+                        $.fn.randomize=function{selector}{
+                             var$elems=selector?$(this).find(selector):$(this).children(),
+                             $parents = $elems.parent();
+                $parents.each(function () {
+                    $(this).children(selector).sort(function () {
+                        return Math.round(Math.random()) - 0.5;
+                        // }). remove().appendTo(this); // 2014-05-24: Removed `random` but leaving for reference. See notes under 'ANOTHER EDIT'
+                    }).detach().appendTo(this);
+                });
+                return this;
+            };
+            $('ul').randomize();
+        </script>        
+    </body>
+</html>
