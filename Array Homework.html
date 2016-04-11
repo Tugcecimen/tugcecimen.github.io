@@ -1,0 +1,47 @@
+
+<!-- saved from url=(0054)http://tugcecimen.github.io/25%20march%20homework.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="./Array Homework_files/jquery.min.js"></script>        
+
+        <title>Array Homework</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <div id="avg">
+            
+        Average height of members: 164<br>Average weight of members: 75<br></div>
+        
+        <script>
+            
+            var members = {members:[
+                    {"name":"sevim", "height":155, "weight":70},
+                    {"name":"gülden","height":167, "weight":75},
+                    {"name":"kemal", "height":170, "weight":80}]};
+               var avgHeight = calcAvgHeight(members);
+               $('#avg').append("Average height of members: " + avgHeight + "<br>");
+               var avgWeight = calcAvgWeight(members);
+               $('#avg').append("Average weight of members: " + avgWeight + "<br>");
+         
+            function calcAvgHeight(obj){
+                var totalHeight = 0;
+                for(var i = 0; i < obj.members.length; i++){
+                    totalHeight += obj.members[i].height;
+                }
+                return totalHeight / obj.members.length;
+            }
+            
+            function calcAvgWeight(obj){
+             var totalWeight = 0;
+                for(var A = 0; A < obj.members.length; A++){
+                    totalWeight += obj.members[A].weight;
+                }
+                return totalWeight / obj.members.length;
+            }
+        
+        </script>
+        
+    
+
+</body></html>
