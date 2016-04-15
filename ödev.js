@@ -1,3 +1,51 @@
+$('#homework').hover(
+            function() {
+            $(this).css('background-color',"#blue"); 
+        }, 
+            function(){
+            $(this).css("background-color","");
+        }
+		);
+        $('#group').hover(
+            function() {
+            $(this).css('background-color',"blue"); 
+        }, 
+            function(){
+            $(this).css("background-color","");
+        }
+		);
+        $('#izmir').hover(
+            function() {
+            $(this).css('background-color',"#515A5A"); 
+        }, 
+            function(){
+            $(this).css("background-color","");
+        }
+		);
+        $('#cimenc').hover(
+            function() {
+            $(this).css('background-color',"#yellow"); 
+        }, 
+            function(){
+            $(this).css("background-color","");
+        }
+		);
+         $('#cimen').hover(
+            function() {
+            $(this).css('background-color',"pink"); 
+        }, 
+            function(){
+            $(this).css("background-color","");
+        }
+		);
+        $('#tugce').hover(
+            function() {
+            $(this).css('background-color',"blue"); 
+        }, 
+            function(){
+            $(this).css("background-color","");
+        }
+		);
 function Numbers() {
     this.numCorrect = 0;
     this.number = [];
