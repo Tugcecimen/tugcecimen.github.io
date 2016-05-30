@@ -1,0 +1,90 @@
+<html>
+    <head>
+          <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <style>
+            ul {
+                list-style-type: none;
+            }
+            #order {
+                display: none;
+            }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js.cookie.js"></script>
+        <script src="game.js"></script>
+        
+        <script>
+            var reset = function(){
+                Cookies.remove("numbers");
+                window.location.reload();
+            }
+        </script>
+        <style>
+          
+                
+              label{
+                  border:  solid 10px green;
+                 height:100;
+                 width:80px;
+                 color:red;}  
+            
+input[type=text], select {
+  
+    padding: 15px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+     margin-top:1px;
+     
+   }
+   
+
+button  {
+    background-color:#9999FF ;
+    color: white;
+    padding: 15px;
+    margin: 2px 4px 0px 4px ;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+div {
+    border-radius: 5px;
+        padding: 40px;
+}
+
+form{
+	float:left;
+}
+
+
+</style>
+         <style>
+            body {
+                background-image: url("http://www.dogoilpress.com/data/wallpapers/3/FDS_350581.jpg");
+                background-size:cover;
+			}
+         </style>
+         </head>
+    <body>
+      
+
+<div>
+  <form>
+    <label  for="fname">First Name:</label>
+    <input style="background-color:#FF33FF" type="text" id="fname" name="firstname">
+ <label for="fname">Last Name:</label>
+    <input style="background-color:#3399FF" type="text" id="lname" name="lastname">
+
+  </form>
+
+  <button value="Submit" onclick="submit();">Submit</button>   
+</div>
+           
+    </body>
+    </html>

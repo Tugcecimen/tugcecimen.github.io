@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+		.back{
+			position:fixed;
+			left:0;
+			right:0;
+			top:0;
+			bottom:0;
+			z-index:-99;
+			border:solid 10px #FF2299;
+		}
+		.message{
+			position:fixed;
+			left:25%;
+			right:25%;
+			top:10%;
+			bottom:10%;
+			z-index:999;
+			display:none;
+			background-position:cover;
+			background-size:100% 100%;
+		}
+		.left{
+			position:fixed;
+			left:0;
+			top:50px;
+			width:35%;
+			bottom:0%;
+			text-align:center;
+		}
+		.right{
+			position:fixed;
+			right:0;
+			top:50px;
+			width:35%;
+			bottom:0;
+			text-align:center;
+		}
+		.center{
+			position:fixed;
+			left:35%;
+			right:35%;
+			top:50px;
+			bottom:0;
+			text-align:center;
+			padding-top:15%;
+			z-index:-1;
+		}
+		.center img{
+			width:100%;
+			z-index:-1;
+		}
+		.left div, .right div{
+			width:180px;
+			height:130px;
+			background-size:100% 100%;
+			float:left;
+			margin:10px;
+			font-weight:bold;
+			font-size:15pt;
+			text-shadow:1px 1px 1px #FFF;
+			padding-top:50px;
+			z-index:9;
+			cursor:default;
+		}
+		.topbar{
+			font-size:15pt;
+			line-height:50px;
+		}
+		#score{
+			text-align:center;
+			width:100%;
+			position:fixed;
+			top:0;
+			font-weight:bold;
+			color:#FF2299;
+		}
+		#time{
+			position:fixed;
+			right:0px;
+			left:15px;
+			top:30px;
+			text-align:center;
+		}
+		</style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js.cookie.js"></script>
+        <script type="text/javascript" src="game.js"></script>
+    </head>
+    <body onload="init();">
+		<div class="back"></div>
+    	<div class="message" id="win" style="background-image:url('win.jpg');"></div>
+    	<div class="message" id="over" style="background-image:url('over.jpg');"></div>
+    	<div class="message" id="correct" style="background-image:url('correct.jpg');"></div>
+    	<div class="message" id="wrong" style="background-image:url('wrong.jpg');"></div>
+		<div class="topbar">
+			<div id="wel"></div>
+			<div id="score"></div>
+			<div id="time"></div>
+		</div>
+        <div class="left">
+			<div id="x1" style="background-image:url('1.jpg');">
+				cloning
+			</div>
+			<div id="x2" style="background-image:url('10.jpg');">
+				<br /><br /><br />cosmids
+			</div>
+			<div id="x3" style="background-image:url('3.png');color:#FFF;text-shadow:1px 1px 1px #000;">
+				cell
+			</div>
+			<div id="x4" style="background-image:url('4.jpg');color:#FFF;text-shadow:1px 1px 1px #000;">
+				blastp program
+			</div>
+			<div id="x5" style="background-image:url('5.png');color:#FFF;text-shadow:1px 1px 1px #000;">
+				karyotype
+			</div>
+		</div>
+		<div id="center1" class="center">
+			<img alt="" src="basket.jpg" />
+		</div>
+		<div class="right">
+			<div id="y1" style="background-image:url('6.jpg');">
+				comparing a protein sequence against protein database
+			</div>
+			<div id="y2" style="background-image:url('9.png');">
+				<br />the basic unit of any living organism
+			</div>
+			<div id="y3" style="background-image:url('8.jpg');">
+				constitution of chromosomes in a cell
+			</div>
+			<div id="y4" style="background-image:url('7.jpg');">
+				<br />the formation of genetic replicas
+			</div>
+			<div id="y5" style="background-image:url('2.png');">
+				DNA vectors, allowing insertion of long fragments
+			</div>
+		</div>
+    </body>
+</html>
