@@ -33,9 +33,12 @@ function clr(x){
 	temp2 = "";
 }
 function refresh_score(){
-	if(score == 50)
+    document.getElementById("score").innerHTML = "Score: " + score;
+	if(score == 50){
 		win();
-	document.getElementById("score").innerHTML = "Score: " + score;
+                $(timer_stop);
+	
+};
 }
 function timer_start(){
 	timer1 = setInterval(function(){
